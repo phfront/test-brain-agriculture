@@ -80,7 +80,7 @@ const PieChart: React.FC<PieChartProps> = ({ data }) => {
             }}
             labelLine={false}
           >
-            {data.map((entry, index) => (
+            {data.map((_entry, index) => (
               <Cell
                 key={`cell-${index}`}
                 fill={COLORS[index % COLORS.length]}
