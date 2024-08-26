@@ -1,0 +1,23 @@
+.dashboard {
+  @apply grow grid grid-cols-6 gap-4;
+}
+
+.card {
+  @apply bg-[#333333] rounded-lg;
+}
+
+.cardTotal {
+  @apply col-span-3 h-[calc(30vh-60px)] flex flex-col items-center justify-center;
+}
+
+.cardTotal p {
+  @apply text-xl text-center px-3;
+}
+
+.cardTotal h1 {
+  @apply text-7xl;
+}
+
+.cardChart {
+  @apply col-span-2 h-[calc(70vh-60px)] flex flex-col items-center justify-center gap-2 p-2;
+}
