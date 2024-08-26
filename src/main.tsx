@@ -15,7 +15,7 @@ async function enableMocking() {
       ? {}
       : {
           serviceWorker: {
-            url: "/test-brain-agriculture/",
+            url: "/test-brain-agriculture/mockServiceWorker.js",
           },
         }
   );
