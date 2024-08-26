@@ -10,7 +10,15 @@ import Layout from "./shared/components/Layout/index.tsx";
 
 async function enableMocking() {
   const { worker } = await import("./mocks/browser.ts");
-  return worker.start();
+  return worker.start(
+    process.env.NODE_ENV === "development"
+      ? {}
+      : {
+          serviceWorker: {
+            url: "/test-brain-agriculture/",
+          },
+        }
+  );
 }
 
 const router = createBrowserRouter([
