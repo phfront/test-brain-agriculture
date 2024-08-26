@@ -1,7 +1,7 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createHashRouter, RouterProvider } from "react-router-dom";
 import DataProvider from "./store/Provider.tsx";
 import HomePage from "./pages/Home/index.tsx";
 import RuralProducerList from "./pages/RuralProducerList/index.tsx";
@@ -21,7 +21,7 @@ async function enableMocking() {
   );
 }
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: "/",
     element: <Layout />,
